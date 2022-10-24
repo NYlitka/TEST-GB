@@ -1,4 +1,5 @@
-// Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+/*// Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+
 
 
 int Sekond(int num)
@@ -12,3 +13,50 @@ Console.WriteLine("enter 3digit namber: ");
 int num = (Convert.ToInt32(Console.ReadLine()));
 int sekond= Sekond(num);
 Console.WriteLine($"SECOND digit:  "+sekond);
+//Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+*/
+int FindNumberLength(int num)
+{
+    int x=num;
+    int curent=0;
+    while (x!=0)
+    {
+        x = x/10;
+        curent = curent+1;
+        //Console.WriteLine( x);
+    }
+return curent;
+
+}
+int CutThirdPosition ( int num)
+{
+    int length = FindNumberLength(num);
+    int result = Convert.ToInt32(Math.Truncate(num/Math.Pow(10,length-3)));
+return result;
+
+}
+int FindThirdPosition ( int num)
+{
+    int thirddigit=CutThirdPosition(num)%10;
+    return thirddigit;
+}
+
+
+
+Console.WriteLine(" enter digit namber: ");
+int num = (Convert.ToInt32(Console.ReadLine()));
+if (num<100 && num>-100)
+   {
+      Console.WriteLine($"!!!!digit not faund!!!!");
+   }
+else {
+    /*int length=FindNumberLength(num);
+    Console.WriteLine("количество разрядов "+length);
+
+    int pos3=CutThirdPosition (num);
+    Console.WriteLine("трехзачное число "+pos3);
+*/
+    int pos3=FindThirdPosition (num);
+    Console.WriteLine("therdnamber "+pos3);
+
+}
