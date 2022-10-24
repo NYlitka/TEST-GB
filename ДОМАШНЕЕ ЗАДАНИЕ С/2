@@ -1,5 +1,5 @@
-/*// Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 
+/*// Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 
 
 int Sekond(int num)
@@ -14,7 +14,7 @@ int num = (Convert.ToInt32(Console.ReadLine()));
 int sekond= Sekond(num);
 Console.WriteLine($"SECOND digit:  "+sekond);
 //Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
-*/
+
 int FindNumberLength(int num)
 {
     int x=num;
@@ -50,13 +50,39 @@ if (num<100 && num>-100)
       Console.WriteLine($"!!!!digit not faund!!!!");
    }
 else {
-    /*int length=FindNumberLength(num);
-    Console.WriteLine("количество разрядов "+length);
+    //int length=FindNumberLength(num);
+    //Console.WriteLine("количество разрядов "+length);
 
-    int pos3=CutThirdPosition (num);
-    Console.WriteLine("трехзачное число "+pos3);
-*/
+    //int pos3=CutThirdPosition (num);
+    //Console.WriteLine("трехзачное число "+pos3);
+
     int pos3=FindThirdPosition (num);
     Console.WriteLine("therdnamber "+pos3);
 
 }
+*/
+
+//Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+
+void DayoftheWeek (int num)
+{
+ if (num<8)
+ {
+    if (num==6||num==7)
+    {
+        Console.WriteLine("!!Weekend!!");
+    }
+    else
+    {
+        Console.WriteLine("workday");
+    }
+
+ }
+else
+    {
+        Console.WriteLine("wrong number!");
+    }
+}
+Console.WriteLine ("enter day of week: ");
+int num = (Convert.ToInt32(Console.ReadLine()));
+DayoftheWeek (num);
