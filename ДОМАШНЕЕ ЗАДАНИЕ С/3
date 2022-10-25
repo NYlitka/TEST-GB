@@ -1,1 +1,18 @@
 
+//Задача 19 Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+
+void Polindom(int num)
+{
+    if (num>9999&&num<100000)
+        if (num/10000==num%10)
+            if((num/1000)%10==(num%100)/10) Console.WriteLine("YES");
+            else
+            Console.WriteLine( "NO");
+        else
+        Console.WriteLine( "No");
+    else
+    Console.WriteLine( "enter 5digit namber!");
+}
+Console.WriteLine("enter 5digit namber: ");
+int num = (Convert.ToInt32(Console.ReadLine()));
+Polindom(num);
