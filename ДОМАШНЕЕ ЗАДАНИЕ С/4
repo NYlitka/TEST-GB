@@ -32,3 +32,24 @@ void SummNumber (int num)
 Console.Write("enter nummber: ");
 int num = (Convert.ToInt32(Console.ReadLine()));
 SummNumber ( num);
+//Задача 29: Напишите программу, которая задаёт массив из m элементов и выводит их на экран.
+int[]GreatRandomArray (int size)
+{
+    int[] array= new int[size];
+
+    for(int a=0; a<size; a++)
+        array[a]=new Random().Next(0,80);
+        return array;
+}
+void ShowArray(int[]array)
+{
+        for(int a=0;a<array.Length;a++)
+        Console.Write(array[a]+" ");
+    Console.WriteLine ();
+}
+Console.Write("imput nummber of element: ");
+int size = (Convert.ToInt32(Console.ReadLine()));
+
+
+int[] myArray = GreatRandomArray(size);
+ShowArray(myArray);
