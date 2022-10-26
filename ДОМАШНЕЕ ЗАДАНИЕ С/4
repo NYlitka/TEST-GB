@@ -1,4 +1,5 @@
 //Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+/*
 
 void Pow(int num,int a)
 {
@@ -10,3 +11,24 @@ int num = (Convert.ToInt32(Console.ReadLine()));
 Console.Write("enter exponentiation: ");
 int a = (Convert.ToInt32(Console.ReadLine()));
 Pow(num, a);
+*/
+//Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
+void SummNumber (int num)
+{
+    int result=0;
+    int a=num;
+    int b=0;
+    while(a>0)
+   { 
+    b=a%10;
+    result = result+b;
+    a=a/10;
+
+    //Console.Write(result+" "+a);
+   }
+    Console.Write(result+" ");
+}
+Console.Write("enter nummber: ");
+int num = (Convert.ToInt32(Console.ReadLine()));
+SummNumber ( num);
