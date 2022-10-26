@@ -1,1 +1,12 @@
+//Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
 
+void Pow(int num,int a)
+{
+    double result= Math.Pow(num,a);
+    Console.Write(result+" ");
+}
+Console.Write("enter nummber: ");
+int num = (Convert.ToInt32(Console.ReadLine()));
+Console.Write("enter exponentiation: ");
+int a = (Convert.ToInt32(Console.ReadLine()));
+Pow(num, a);
