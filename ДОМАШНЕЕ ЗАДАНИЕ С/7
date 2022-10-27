@@ -1,1 +1,23 @@
 
+//Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+
+int NumberEnter(int m)
+{
+    int result=0;
+    int x=0;
+    while(x<m)
+    {
+        Console.Write("enter nummber: ");
+        int num = (Convert.ToInt32(Console.ReadLine()));
+        x++;
+        if (num>0) result++;
+    }
+    return result;
+}
+
+
+Console.Write("enter values: ");
+int m = (Convert.ToInt32(Console.ReadLine()));
+int number=NumberEnter(m);
+
+Console.Write(number +" positiv values has bin entered");
