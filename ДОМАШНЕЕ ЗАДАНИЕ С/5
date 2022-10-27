@@ -39,3 +39,22 @@ ShowArray(myArray);
 
 int evenNumbers=EvenNumbers(myArray);
 Console.Write("number of even numbers is: "+ evenNumbers);
+
+//Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+
+int SummAddPosition(int[]array)
+{
+    int result=0;
+        for(int i=1; i<array.Length;i=i+2)
+        result=result+array[i];
+    return result;
+}
+Console.Write("imput nummber of element: ");
+int size = (Convert.ToInt32(Console.ReadLine()));
+int[] myArray = GreatRandomArray(size);
+ShowArray(myArray);
+
+int summAdd=SummAddPosition(myArray);
+Console.Write("Summa Add Position is: "+ summAdd);
+
+
