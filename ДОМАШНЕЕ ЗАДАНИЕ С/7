@@ -84,3 +84,63 @@ int n=Convert.ToInt32(Console.ReadLine());
 Console.Write("Imput a number of columns: ");
 int m=Convert.ToInt32(Console.ReadLine());
 FindNumberindex(n, m,myArray);
+   //Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+
+    //Например, задан массив:
+int[,]GreatRandom2dArray()
+{
+    //int rows=5;
+    //int columns=5;
+    Console.Write("Imput a number of rows: ");
+    int rows=Convert.ToInt32(Console.ReadLine());
+    Console.Write("Imput a number of columns: ");
+    int columns=Convert.ToInt32(Console.ReadLine());
+    int min=0;
+    int max=99;
+    int[,]array= new int[rows,columns];
+
+    for(int i=0;i<rows;i++)
+        for(int j=0; j<columns;j++)
+            array[i,j] =new Random().Next(min,max+1);
+    return array;
+}
+void Show2dArray(int[,]array)
+{
+    for(int i=0;i< array.GetLength(0); i++)
+    {
+        for(int j=0;j<array.GetLength(1);j++)
+        Console.Write(array[i,j]+" ");
+
+        Console.WriteLine();
+    }
+}
+
+int[] MeanvalueRows(int[,]array)
+    {
+
+        int n=array.GetLength(0);
+        int m=array.GetLength(1);
+        int[]Colomns=new int[m];
+
+        for(int j=0;j<m;j++)
+        {      
+            for(int i=0; i<n;i++)
+            {   
+                Colomns[j]=Colomns[j]+array[i,j];
+            }
+            Colomns[j]=Colomns[j]/n;
+        }
+    Console.WriteLine();
+     return Colomns;
+    }
+
+void ShowArray(int[]array)
+{
+        for(int a=0;a<array.Length;a++)
+        Console.Write(array[a]+" ");
+    Console.WriteLine ();
+}
+
+int[,]myArray=GreatRandom2dArray();
+Show2dArray(myArray);
+ShowArray(MeanvalueRows(myArray));
