@@ -1,1 +1,232 @@
+/*
+//Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
+int[,]GreatRandom2dArray(int rows,int columns,int minValue, int maxValue)
+{
+    int[,]array= new int[rows,columns];
 
+    for(int i=0;i<rows;i++)
+        for(int j=0; j<columns;j++)
+            array[i,j] =new Random().Next(minValue,maxValue+1);
+    return array;
+}
+void Show2dArray(int[,]array)
+{
+    for(int i=0;i< array.GetLength(1); i++)
+    {
+        for(int j=0;j<array.GetLength(0);j++)
+        Console.Write(array[j,i]+" ");
+
+        Console.WriteLine();
+    }
+}
+
+void ChangeArray(int[,]array)
+{
+    if (array.GetLength(1)<2)
+        Console.WriteLine("Impossible to change!");
+    else
+    {
+        int temp;
+        for(int j=0;j<array.GetLength(1);j++)
+        {
+            for(int i=0;i<array.GetLength(0);i++)
+            {
+                for(int ix=0;ix<array.GetLength(0)-1-i;ix++)
+                {
+                    if(array[ix,j]> array [ix+1,j]) 
+                    {
+                    temp = array[ix,j];
+                    array[ix,j]=array[ix+1,j];
+                    array[ix+1,j]=temp;
+                    }
+                 
+                }
+            }
+                    
+    }
+}  
+}
+   int[,]myArray=GreatRandom2dArray(7,3,1,99);
+Show2dArray(myArray);
+ChangeArray(myArray);
+Console.WriteLine();
+Show2dArray(myArray);   
+ 
+//Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
+         
+int[,]GreatRandom2dArray(int rows,int columns,int minValue, int maxValue)
+{
+    int[,]array= new int[rows,columns];
+
+    for(int i=0;i<rows;i++)
+        for(int j=0; j<columns;j++)
+            array[i,j] =new Random().Next(minValue,maxValue+1);
+    return array;
+}
+void Show2dArray(int[,]array)
+{
+    for(int i=0;i< array.GetLength(0); i++)
+    {
+        for(int j=0;j<array.GetLength(1);j++)
+        Console.Write(array[i,j]+" ");
+
+        Console.WriteLine();
+    }
+}
+
+int SummaLinesArray(int[,]array, int maxValue)
+{
+    int num=0;
+    int min=maxValue*array.GetLength(1);
+    for(int i=0;i< array.GetLength(0); i++)
+    {
+        int summ=0;
+        for(int j=0;j< array.GetLength(1); j++)
+        {
+            summ=summ+array[i,j];
+        
+        }
+        Console.WriteLine(summ);
+        if(summ<min)
+        {
+            min=summ;
+            num=i+1;
+        }
+    
+    }
+return num;
+}
+int maxValue=99;
+int[,]myArray=GreatRandom2dArray(3,4,1,maxValue);
+Show2dArray(myArray);
+int Str = SummaLinesArray(myArray, maxValue);
+Console.WriteLine(Str);
+
+//Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+
+int[,]GreatRandom2dArray(int rows,int columns,int minValue, int maxValue)
+{
+    int[,]array= new int[rows,columns];
+
+    for(int i=0;i<rows;i++)
+        for(int j=0; j<columns;j++)
+            array[i,j] =new Random().Next(minValue,maxValue+1);
+    return array;
+}
+void Show2dArray(int[,]array)
+{
+    for(int i=0;i< array.GetLength(0); i++)
+    {
+        for(int j=0;j<array.GetLength(1);j++)
+        Console.Write(array[i,j]+" ");
+
+        Console.WriteLine();
+    }
+}
+
+
+
+
+int[,] MatrixMultiplication(int[,]array1,int[,]array2)
+{
+    int a1=array1.GetLength(0);
+    int b1=array1.GetLength(1);
+    int b2=array2.GetLength(1);
+    int[,] matrixnew=new int[a1, b2];
+    int summ=0;
+    if (a1!= b2)
+        Console.WriteLine("Multiplication is impossible! The number of columns of the first matrix is ​​not equal to the number of rows of the second matrix.");
+    else
+    {
+             for (int i = 0; i < a1; i++)
+                for (int j = 0; j < b2; j++)
+                {
+                    for (int r = 0; r < b1; r++)
+                    {
+                    summ = summ + array1[i, r] * array2[r, j];
+                    }
+                matrixnew[i, j] = summ;
+                summ= 0;
+                }
+         
+                   
+    }
+return matrixnew;   
+}
+    
+
+//int maxValue=99;
+int[,]myArray1=GreatRandom2dArray(3,2,1,9);
+Show2dArray(myArray1);
+Console.WriteLine();
+int[,]myArray2=GreatRandom2dArray(2,3,1,9);
+Show2dArray(myArray2);
+Console.WriteLine();
+int [,] myArray= MatrixMultiplication(myArray1,myArray2);
+Show2dArray(myArray);
+
+//Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел.
+// Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+
+*/
+int[]GreatRandomArray (int size,int minValu,int maxValue)
+{
+    int[] array= new int[size];
+    int V=minValu;
+    for(int a=0; a<size; a++)
+    {
+        array[a]=V;
+        V=V+1;
+    }
+    return array;
+}
+void ShowArray(int[]array)
+{
+        for(int a=0;a<array.Length;a++)
+        Console.Write(array[a]+" ");
+    Console.WriteLine ();
+}
+
+int[,,]GreatRandom3dArray(int[]arr,int rows,int columns,int lines)
+{
+    int[,,]array = new int[rows,columns,lines];
+    int k=1;
+    for(int i=0;i<rows;i++)
+        for(int j=0; j<columns;j++)
+            for(int q=0; q<columns;q++)
+            {
+                while(arr[k] == 0)
+                {
+                    k= new Random().Next(0,arr.GetLength(0)-1);
+                }
+
+                array[i,j,q] =arr[k];
+                arr[k]=0;
+            }
+    return array;
+}
+void Show3dArray(int[,,]array)
+{
+    for(int i=0;i< array.GetLength(0); i++)
+
+    {
+        
+        for(int j=0;j<array.GetLength(1);j++)
+            {
+            Console.WriteLine();
+            for(int q=0;q<array.GetLength(2);q++)
+                Console.Write(array[i,j,q]+"("+i+","+j+","+q+")"+" ");
+            }
+
+        Console.WriteLine();
+    }
+}
+
+
+
+int [] myArray1=GreatRandomArray (100,0,99);
+//ShowArray(myArray1);
+Console.WriteLine();
+int[,,]myArray=GreatRandom3dArray(myArray1,2,2,2);
+Show3dArray(myArray);
+Console.WriteLine();
