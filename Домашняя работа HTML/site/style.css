@@ -62,12 +62,12 @@ a{
 .skill{
     margin-top: 50px;
     text-align: center;
-    /display: flex;
-    /flex-direction: column;
-    /flex-wrap: wrap;
-    /align-content: center;
-    /justify-content: center;
-    /align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 .skill_content{
     padding-top: 50px;
@@ -107,7 +107,7 @@ a{
     justify-content: center;
     align-items: center;
 }
-.kontakts{
+.сontakts{
     
     padding-top: 50px;
     padding-bottom:100px;
@@ -167,7 +167,7 @@ a{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /text-emphasis-color: transparent;  
+    text-emphasis-color: transparent;  
     mix-blend-mode: normal;
 }
 .text{
@@ -180,7 +180,7 @@ a{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /text-emphasis-color: transparent;  
+    text-emphasis-color: transparent;  
     mix-blend-mode:normal;
     overflow:hidden;
 }
