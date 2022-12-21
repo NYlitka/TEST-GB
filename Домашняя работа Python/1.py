@@ -72,14 +72,17 @@
 # 5 -> 2, 4
 # 8 -> 2, 4, 6, 8
 
-def addNumbers():
 
+def addNumbers():
+    print ("Введите число")
     number = int (input())
-    while number > N:
-            N=N+2
-            print (N)
+    N=0
+    while number > N+1:
+        N=N+2
+        print (N,end=" ")
     
 
+addNumbers()
 
 
 
