@@ -46,3 +46,25 @@ def zadacha3 ():
     print (f' {text2[0]}- {count} ,{text2[1]}- {count1} ,{ text2[2]}- {count2},')
 
 zadacha3()
+
+
+# Задача 4. Задайте список из N элементов, заполненных числами из промежутка [-N, N]. Сдвиньте все элементы списка на 2 позиции вправо.
+
+# 3 -> [2, 3, -3, -2, -1, 0, 1]
+
+
+def zadacha4 ():
+    
+    N = int(input ('Введите чило: '))
+    result=[]
+    result1=[]
+    for i in range (-N,N+1): 
+        result.append (i)  
+    print (result)
+
+    L=len(result)
+    L1= result[L-2:L]
+    L2= result [ :L-2]
+    print (L1+L2)
+
+zadacha4()
