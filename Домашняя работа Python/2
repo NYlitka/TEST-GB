@@ -24,3 +24,25 @@ def zadacha2 ():
                 print (f' {x} | {y} | { z} | {not x and y or z}')
 
 zadacha2 ()
+
+
+def zadacha3 ():
+    text1 = 'onetwonine'
+    text2 = 'one'
+    count=0
+    count1=0
+    count2=0
+    for i in range (len(text1)):
+        x=text1[i]
+        if text2[0]==x:
+            count+=1
+        if text2[1]==x:
+            count1+=1
+        if text2[2]==x:
+            count2+=1
+
+        #print (text1[i])
+        
+    print (f' {text2[0]}- {count} ,{text2[1]}- {count1} ,{ text2[2]}- {count2},')
+
+zadacha3()
